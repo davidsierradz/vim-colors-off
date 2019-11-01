@@ -43,7 +43,7 @@ let s:dark_purple     = { "gui": "#523C79", "cterm": "5"   }
 let s:light_purple    = { "gui": "#6855DE", "cterm": "13"  }
 let s:yellow          = { "gui": "#F3E430", "cterm": "11"  }
 let s:dark_yellow     = { "gui": "#A89C14", "cterm": "3"   }
-let s:black_comment   = { "gui": "#777777", "cterm": "249" }
+let s:black_comment   = { "gui": "#333333", "cterm": "249" }
 let s:ligh_comment    = { "gui": "#CCCCCC", "cterm": "251" }
 
 let s:gb_faded_green   = { "gui": "#79740e", "cterm": "100" }
@@ -182,7 +182,7 @@ call s:h("Search",        {"bg": s:selection, "fg": s:selection_fg})
 call s:h("MoreMsg",       {"fg": s:medium_gray, "cterm": "bold", "gui": "bold"})
 hi! link ModeMsg MoreMsg
 call s:h("LineNr",        {"fg": s:bg_subtle})
-call s:h("CursorLineNr",  {"fg": s:blue, "bg": s:bg_very_subtle})
+call s:h("CursorLineNr",  {"fg": s:blue})
 call s:h("Question",      {"fg": s:red})
 call s:h("Title",         {"fg": s:dark_blue})
 call s:h("Visual",        {"bg": s:visual, "fg": s:selection_fg})
