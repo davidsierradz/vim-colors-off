@@ -21,7 +21,7 @@ let g:colors_name='off'
 let s:black           = { "gui": "#282828", "cterm": "0"   }
 let s:medium_gray     = { "gui": "#767676", "cterm": "243" }
 let s:white           = { "gui": "#F1F1F1", "cterm": "15"  }
-let s:actual_white    = { "gui": "#fbf1c7", "cterm": "231" }
+let s:actual_white    = { "gui": "#f2e5bc", "cterm": "231" }
 let s:light_black     = { "gui": "#424242", "cterm": "8"   }
 let s:lighter_black   = { "gui": "#545454", "cterm": "240" }
 let s:subtle_black    = { "gui": "#303030", "cterm": "236" }
@@ -164,6 +164,7 @@ hi! link jsNumber         String
 hi! link jsFloat          String
 hi! link jsNull           String
 hi! link jsUndefined      String
+hi! link jsNan            String
 
 hi! link VertSplit        Normal
 hi! link StatusLine       Normal
