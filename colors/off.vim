@@ -165,6 +165,7 @@ hi! link jsFloat          String
 hi! link jsNull           String
 hi! link jsUndefined      String
 hi! link jsNan            String
+hi! link jsBuiltinValues  String
 
 hi! link VertSplit        Normal
 hi! link StatusLine       Normal
