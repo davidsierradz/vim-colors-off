@@ -16,49 +16,55 @@ if exists('syntax on')
     syntax reset
 endif
 
+if $TERM == 'linux' || $TERM == 'screen'
+  set notermguicolors
+else
+  set termguicolors
+endif
+
 let g:colors_name='off'
 
 let s:black           = { "gui": "#282828", "cterm": "0"   }
-let s:medium_gray     = { "gui": "#767676", "cterm": "243" }
+let s:medium_gray     = { "gui": "#767676", "cterm": "8"   }
 let s:white           = { "gui": "#F1F1F1", "cterm": "15"  }
-let s:actual_white    = { "gui": "#f2e5bc", "cterm": "231" }
+let s:actual_white    = { "gui": "#f2e5bc", "cterm": "15"  }
 let s:light_black     = { "gui": "#424242", "cterm": "8"   }
-let s:lighter_black   = { "gui": "#545454", "cterm": "240" }
-let s:subtle_black    = { "gui": "#303030", "cterm": "236" }
-let s:light_gray      = { "gui": "#B2B2B2", "cterm": "249" }
-let s:lighter_gray    = { "gui": "#C6C6C6", "cterm": "251" }
-let s:pink            = { "gui": "#fb007a", "cterm": "9"   }
-let s:dark_red        = { "gui": "#C30771", "cterm": "1"   }
-let s:light_red       = { "gui": "#E32791", "cterm": "1"   }
-let s:orange          = { "gui": "#D75F5F", "cterm": "167" }
-let s:darker_blue     = { "gui": "#005F87", "cterm": "18"  }
-let s:dark_blue       = { "gui": "#008EC4", "cterm": "4"   }
-let s:blue            = { "gui": "#20BBFC", "cterm": "12"  }
-let s:light_blue      = { "gui": "#b6d6fd", "cterm": "153" }
-let s:dark_cyan       = { "gui": "#20A5BA", "cterm": "6"   }
-let s:light_cyan      = { "gui": "#4FB8CC", "cterm": "14"  }
+let s:lighter_black   = { "gui": "#545454", "cterm": "15"  }
+let s:subtle_black    = { "gui": "#303030", "cterm": "8"   }
+let s:light_gray      = { "gui": "#B2B2B2", "cterm": "7"   }
+let s:lighter_gray    = { "gui": "#C6C6C6", "cterm": "7"   }
+let s:pink            = { "gui": "#fb007a", "cterm": "12"  }
+let s:dark_red        = { "gui": "#C30771", "cterm": "4"   }
+let s:light_red       = { "gui": "#E32791", "cterm": "12"  }
+let s:orange          = { "gui": "#D75F5F", "cterm": "4"   }
+let s:darker_blue     = { "gui": "#005F87", "cterm": "1"   }
+let s:dark_blue       = { "gui": "#008EC4", "cterm": "1"   }
+let s:blue            = { "gui": "#20BBFC", "cterm": "9"   }
+let s:light_blue      = { "gui": "#b6d6fd", "cterm": "9"   }
+let s:dark_cyan       = { "gui": "#20A5BA", "cterm": "3"   }
+let s:light_cyan      = { "gui": "#4FB8CC", "cterm": "11"  }
 let s:dark_green      = { "gui": "#10A778", "cterm": "2"   }
 let s:light_green     = { "gui": "#5FD7A7", "cterm": "10"  }
 let s:dark_purple     = { "gui": "#523C79", "cterm": "5"   }
 let s:light_purple    = { "gui": "#6855DE", "cterm": "13"  }
-let s:yellow          = { "gui": "#F3E430", "cterm": "11"  }
-let s:dark_yellow     = { "gui": "#A89C14", "cterm": "3"   }
-let s:black_comment   = { "gui": "#333333", "cterm": "249" }
-let s:ligh_comment    = { "gui": "#CCCCCC", "cterm": "251" }
+let s:yellow          = { "gui": "#F3E430", "cterm": "14"  }
+let s:dark_yellow     = { "gui": "#A89C14", "cterm": "6"   }
+let s:black_comment   = { "gui": "#333333", "cterm": "8"   }
+let s:ligh_comment    = { "gui": "#CCCCCC", "cterm": "7"   }
 
-let s:gb_faded_green   = { "gui": "#79740e", "cterm": "100" }
-let s:gb_faded_aqua    = { "gui": "#427b58", "cterm": "65"  }
-let s:gb_faded_red     = { "gui": "#9d0006", "cterm": "88"  }
-let s:gb_faded_yellow  = { "gui": "#b57614", "cterm": "136" }
-let s:gb_faded_orange  = { "gui": "#af3a03", "cterm": "130" }
-let s:gb_faded_blue    = { "gui": "#076678", "cterm": "24"  }
+let s:gb_faded_green   = { "gui": "#79740e", "cterm": "10" }
+let s:gb_faded_aqua    = { "gui": "#427b58", "cterm": "11" }
+let s:gb_faded_red     = { "gui": "#9d0006", "cterm": "12" }
+let s:gb_faded_yellow  = { "gui": "#b57614", "cterm": "14" }
+let s:gb_faded_orange  = { "gui": "#af3a03", "cterm": "13" }
+let s:gb_faded_blue    = { "gui": "#076678", "cterm": "9"  }
 
-let s:gb_bright_green  = { "gui": "#b8bb26", "cterm": "142" }
-let s:gb_bright_aqua   = { "gui": "#8ec07c", "cterm": "108" }
-let s:gb_bright_red    = { "gui": "#fb4934", "cterm": "167" }
-let s:gb_bright_yellow = { "gui": "#fabd2f", "cterm": "214" }
-let s:gb_bright_orange = { "gui": "#fe8019", "cterm": "208" }
-let s:gb_bright_blue   = { "gui": "#83a598", "cterm": "109" }
+let s:gb_bright_green  = { "gui": "#b8bb26", "cterm": "2"  }
+let s:gb_bright_aqua   = { "gui": "#8ec07c", "cterm": "3"  }
+let s:gb_bright_red    = { "gui": "#fb4934", "cterm": "4"  }
+let s:gb_bright_yellow = { "gui": "#fabd2f", "cterm": "6"  }
+let s:gb_bright_orange = { "gui": "#fe8019", "cterm": "5"  }
+let s:gb_bright_blue   = { "gui": "#83a598", "cterm": "1"  }
 
 if &background == "dark"
   let s:bg              = s:black
@@ -117,7 +123,11 @@ function! s:h(group, style)
 endfunction
 
 call s:h("Normal",        {"bg": s:bg, "fg": s:norm})
-call s:h("Cursor",        {"bg": s:blue, "fg": s:norm })
+if $TERM == 'linux' || $TERM == 'screen'
+  call s:h("Cursor",        {})
+else
+  call s:h("Cursor",        {"bg": s:blue, "fg": s:norm })
+endif
 call s:h("String",        {"bg": s:bg, "fg": s:dark_blue})
 call s:h("Comment",       {"fg": s:comment, "gui": "italic"})
 
